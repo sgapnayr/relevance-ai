@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "type-check": "tsc --noEmit",
+    "push": "next lint && npm run type-check && git add . && git commit -m 'update' && git push && next dev"
   },
   "dependencies": {
     "react": "^18",
